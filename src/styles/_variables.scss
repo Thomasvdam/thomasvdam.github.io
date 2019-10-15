@@ -1,0 +1,35 @@
+// Colours
+$white: #FFFFFF;
+$brokenWhite: #F2F2F2;
+$darkGrey: #434343;
+$black: #000000;
+
+$colours: (
+    background: (
+        main: $darkGrey,
+        content: $brokenWhite,
+    ),
+    text: (
+        main: $white,
+        content: $black,
+    )
+);
+
+@function get-colour($name, $variation: 'main', $opacity: 1) {
+    $colour-spectrum: map-get($colours, $name);
+
+    @if $colour-spectrum {
+        $colour: map-get($colour-spectrum, $variation);
+        @if ($colour) {
+            @if $opacity < 1 {
+                @return rgba($colour, $opacity);
+            }
+            @return $colour;
+        } @else {
+            @warn "colour variation from `#{$name}` does not exist: `#{$variation}`";
+        }
+    } @else {
+        @warn "colour name does not exist: `#{$name}`";
+    }
+    @return pink;
+}

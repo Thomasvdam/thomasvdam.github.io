@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -200,6 +202,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
+  background-color: get-colour('background', 'content');
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

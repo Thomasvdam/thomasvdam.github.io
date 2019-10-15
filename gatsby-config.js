@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `thomasvandam.com`,
+    title: `cat /etc/thoughts`,
     description: `Public diary.`,
     author: `@saDammie`,
   },
   plugins: [
+    'gatsby-plugin-sass',
     `gatsby-plugin-typescript`,
     `gatsby-plugin-tslint`,
     `gatsby-plugin-react-helmet`,
