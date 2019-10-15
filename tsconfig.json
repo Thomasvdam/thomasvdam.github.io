@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+      "module": "esnext",
+      "target": "es2018",
+      "jsx": "react",
+      "moduleResolution": "node",
+      "strictNullChecks": true,
+      "typeRoots" : ["./node_modules/@types", "./typings"],
+      "baseUrl": ".",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "paths": {
+        "~/*": ["./src/*"]
+      }
+  }
+}
