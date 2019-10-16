@@ -24,6 +24,7 @@
   "devDependencies": {
     "@types/react": "^16.9.6",
     "@types/react-dom": "^16.9.2",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2",
     "tslint": "^5.20.0",
     "tslint-config-airbnb": "^5.11.2",
@@ -38,6 +39,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "deploy": "gatsby build && gh-pages -d public -b master",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
