@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "10"
+deploy:
+  provider: script
+  # Note: change "docs" to the directory where your gatsby-site lives, if necessary
+  script: npm install && npm run deploy -- -r https://$GH_TOKEN@github.com/Thomasvdam/thomasvdam.github.io.git
+  skip_cleanup: true
+  on:
+    branch: develop
