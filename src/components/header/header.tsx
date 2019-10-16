@@ -2,8 +2,6 @@ import { Link } from 'gatsby';
 import React from 'react';
 import $ from './header.module.scss';
 
-console.log('[DEBUG]: $ ::: ', $);
-
 const Header = ({ siteTitle }) => (
   <header className={$.header}>
     <div className={$.container}>

@@ -1,0 +1,37 @@
+$imageWidth: 30%;
+
+:local {
+    .upper-container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .introText {
+        text-align: left;
+        width: 100% - $imageWidth;
+        padding-right: 1rem;
+
+        @media screen and (max-width: 420px) {
+            order: 2;
+            padding-right: 0;
+            width: 100%;
+        }
+    }
+
+    .picture-container {
+        width: $imageWidth;
+
+        @media screen and (max-width: 420px) {
+            order: 1;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .lower-container {
+        
+    }
+}
