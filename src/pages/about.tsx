@@ -14,7 +14,7 @@ const IndexPage = () => (
     <div className={$.upperContainer}>
       <div className={$.introText}>
         <p>
-          I'm Thomas. I work at <a target="_blank" href="https://www.wearetriple.com/">Triple</a> as a frontend web
+          I'm Thomas. I work at <a target="_blank" rel="noopener" href="https://www.wearetriple.com/">Triple</a> as a frontend web
           developer and do some 'coaching' on the side, more on that later.
         </p>
         <p>
@@ -48,7 +48,7 @@ const IndexPage = () => (
       </InfoBlock>
       <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="What I do now">
         <p>
-          I'm currently a frontend web developer at <a target="_blank" href="https://www.wearetriple.com/">Triple</a>,
+          I'm currently a frontend web developer at <a target="_blank" rel="noopener" href="https://www.wearetriple.com/">Triple</a>,
           with a focus on the more technical side rather than the visual side (as you have probably already gathered).
           This includes video streaming; DRM; integration of various open source streaming projects such as hls.js,
           dash.js, Shaka Player; and Chromecast development.
