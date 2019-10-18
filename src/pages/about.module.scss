@@ -31,7 +31,25 @@ $imageWidth: 30%;
         }
     }
 
-    .lower-container {
-        
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .more-info {
+        width: calc(50% - 1rem);
+
+        @media screen and (max-width: 720px) {
+            width: 100% !important;
+        }
+
+        &_wide {
+            width: calc(100% - 1rem);
+        }
     }
 }
