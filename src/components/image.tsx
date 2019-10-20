@@ -13,7 +13,7 @@ import Img from 'gatsby-image';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ filename, alt, title = '' }) => {
+const Image = ({ filename, alt, title = '', className = '' }) => {
     const data = useStaticQuery(graphql`
     query {
       images: allFile {
@@ -40,7 +40,7 @@ const Image = ({ filename, alt, title = '' }) => {
     const { fluid } = image.node.childImageSharp;
 
     return (
-        <Img title={title} alt={alt} fluid={fluid}/>
+        <Img className={className} title={title} alt={alt} fluid={fluid}/>
     );
 };
 

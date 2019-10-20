@@ -25,7 +25,7 @@ const IndexPage = () => (
       </div>
 
       <div className={$.pictureContainer}>
-        <Image filename="batman.png" title="I've never seen Batman and myself in the same room together..." alt="A photo of Thomas"/>
+        <Image className={$.picture} filename="batman.png" title="I've never seen Batman and myself in the same room together..." alt="A photo of Thomas"/>
       </div>
     </div>
 
@@ -43,7 +43,7 @@ const IndexPage = () => (
         <ul>
           <li>Bachelor's degree in English Language & Culture from the University of Amsterdam</li>
           <li>Master's degree in Information Studies: Game Studies track from the University of Amsterdam</li>
-          <li>Frontend web developer at Triple</li>
+          <li>Frontend web developer at <a target="_blank" rel="noopener" href="https://www.wearetriple.com/">Triple</a></li>
         </ul>
       </InfoBlock>
       <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="What I do now">

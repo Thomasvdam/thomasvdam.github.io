@@ -21,13 +21,21 @@ $imageWidth: 30%;
         }
     }
 
-    .picture-container {
-        width: $imageWidth;
+    .picture {
+        box-sizing: border-box;
+        border: 1px solid black;
+        box-shadow: 1rem 1rem 1rem -1.3rem rgba(0, 0, 0, 0.8);
+        
+        &-container {
+            width: calc(#{$imageWidth} - 0.5rem);
+            margin-right: 0.5rem;
 
-        @media screen and (max-width: 420px) {
-            order: 1;
-            width: 100%;
-            margin-bottom: 1rem;
+            @media screen and (max-width: 420px) {
+                order: 1;
+                width: 100%;
+                margin-bottom: 1rem;
+                margin-right: 0;
+            }
         }
     }
 
