@@ -9,7 +9,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description = '', lang = 'en-uk', meta= [], title }) {
+type props = {
+    description?: string;
+    lang?: string;
+    meta?: any[];
+    title: string;
+};
+
+function SEO({ description = '', lang = 'en-uk', meta = [], title }: props) {
     const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,7 +31,7 @@ function SEO({ description = '', lang = 'en-uk', meta= [], title }) {
     `
   );
 
-    const metaDescription = description || site.siteMetadata.description;
+    const metaDescription: string = description || site.siteMetadata.description;
 
     return (
     <Helmet

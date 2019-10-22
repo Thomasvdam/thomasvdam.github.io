@@ -13,7 +13,14 @@ import Img from 'gatsby-image';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = ({ filename, alt, title = '', className = '' }) => {
+type props = {
+    filename: string;
+    alt: string;
+    title?: string;
+    className?: string;
+};
+
+const Image = ({ filename, alt, title = '', className = '' }: props) => {
     const data = useStaticQuery(graphql`
     query {
       images: allFile {
