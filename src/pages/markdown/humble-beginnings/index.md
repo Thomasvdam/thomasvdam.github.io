@@ -1,10 +1,9 @@
 ---
-path: "/blog/2019-10-18"
 date: "2019-10-18"
 title: "Humble beginnings"
+subject: "Why did I start this and what is the point?"
 tags:
     - personal
-    - development
 ---
 As far as first posts go this one is pretty unremarkable, but we all have to start somewhere.
 

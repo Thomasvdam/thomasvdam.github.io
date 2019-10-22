@@ -5,11 +5,12 @@ import Layout from '~/components/layout/layout';
 import Image from '~/components/image';
 import SEO from '~/components/seo';
 import InfoBlock from '~/components/infoBlock/infoBlock';
+import FirstWordHighlight from '~/components/firstWordHighlight/firstWordHighlight';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="About me" />
-    <h2>About me</h2>
+    <h2><FirstWordHighlight>About me</FirstWordHighlight></h2>
 
     <div className={$.upperContainer}>
       <div className={$.introText}>
@@ -19,8 +20,8 @@ const IndexPage = () => (
         </p>
         <p>
           I created this site because I wanted to get some experience with Gatsby, I needed a holiday project, and
-          it gives me a place to store my thoughts. It's not about publishing articles, I hope that the act of writing
-          will help me structure my thoughts.
+          it gives me a place to store my thoughts. It's not about publishing articles; I hope that the taking the time
+          to write will give me the opportunity to structure my thoughts.
         </p>
       </div>
 
