@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+:local {
+    .tag {
+        height: fit-content;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 5px 15px 5px 15px;
+        color: get-colour('text', 'content');
+        text-decoration: none;
+        transition: background-color 500ms ease-out;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        @each $tuple in $categories {
+            &__#{nth($tuple, 1)} {
+                background-color: rgba($color: nth($tuple, 2), $alpha: .1);
+
+                &:hover {
+                    background-color: rgba($color: nth($tuple, 2), $alpha: .5);
+                }
+            }
+        }
+    }
+}

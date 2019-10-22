@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+:local {
+    .button {
+        border-radius: 5px;
+        background-color: get-colour('background', 'interactive');
+        color: get-colour('text', 'interactive');
+        
+        cursor: pointer;
+        
+        &:hover {
+            color: get-colour('text', 'highlight');
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+:local {
+    .container {
+        padding-top: 0.5rem;
+        box-sizing: border-box;
+        border-top: 1px dashed grey;
+
+        &:first-child {
+            padding-top: 1rem;
+        }
+    }
+
+    .preview-link {
+        color: get-colour('text', 'content');
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .title {
+        margin-bottom: 0.25rem;
+    }
+
+    .subject {
+        margin-bottom: 0.5rem;
+        color: get-colour('text', 'additional');
+    }
+}

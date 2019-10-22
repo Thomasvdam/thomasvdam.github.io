@@ -1,19 +1,36 @@
 // Colours
 $white: #FFFFFF;
 $brokenWhite: #F2F2F2;
-$darkGrey: #434343;
+$neutronRed: #CD3135;
+$yellow: #CFCE31;
+$lime: #7FB026;
+$blue: #2C4A9A;
+$lightGrey: #434343;
 $black: #000000;
 
 $colours: (
     background: (
-        main: $darkGrey,
+        main: $lightGrey,
         content: $brokenWhite,
+        highlight: $neutronRed,
+        interactive: $lightGrey,
+        active: $lightGrey,
     ),
     text: (
         main: $white,
         content: $black,
+        additional: rgba($black, .8),
+        highlight: $neutronRed,
+        interactive: $white,
     )
 );
+
+$categories:
+    'development' $neutronRed,
+    'music' $blue,
+    'personal' $lime,
+    'synthesis' $yellow,
+;
 
 @function get-colour($name, $variation: 'main', $opacity: 1) {
     $colour-spectrum: map-get($colours, $name);
