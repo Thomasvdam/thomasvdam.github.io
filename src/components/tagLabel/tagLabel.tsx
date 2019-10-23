@@ -9,7 +9,7 @@ type props = {
 const tagToClass = (tag: string): string => $[`tag__${tag}`];
 
 const TagLabel = ({ tag }: props) => (
-    <Link className={`${$.tag} ${tagToClass(tag)}`} to={`/category/${tag}`}>
+    <Link activeClassName={$.tag__active} className={`${$.tag} ${tagToClass(tag)}`} to={`/category/${tag}`}>
         <span className={$.text}>{tag}</span>
     </Link>
 );

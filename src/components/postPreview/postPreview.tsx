@@ -9,16 +9,17 @@ import FirstWordHighlight from '~/components/firstWordHighlight/firstWordHighlig
 type props = {
     className?: string;
     date: string;
+    from: string;
     slug: string;
     subject: string,
     tags?: string[],
     title: string,
 };
 
-const PostPreview = ({ className = '', date, slug, subject, tags = [], title }: props) => (
+const PostPreview = ({ className = '', date, slug, subject, tags = [], title, from }: props) => (
     <div className={`${$.container} ${className}`}>
         <div>
-            <Link className={$.previewLink} to={`/${slug}`}>
+            <Link className={$.previewLink} to={`/${slug}`} state={{ from, }}>
                 <h3 className={$.title}><FirstWordHighlight>{title}</FirstWordHighlight></h3>
             </Link>
             <DateLabel date={date}/>

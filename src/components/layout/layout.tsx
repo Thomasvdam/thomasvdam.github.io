@@ -12,10 +12,11 @@ import Header from '../header/header';
 import $ from './layout.module.scss';
 
 type props = {
+    back?: string;
     children: React.ReactChild | React.ReactChild[];
 };
 
-const Layout = ({ children }: props) => {
+const Layout = ({ back, children }: props) => {
     const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +29,7 @@ const Layout = ({ children }: props) => {
 
     return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header back={back} siteTitle={data.site.siteMetadata.title} />
       <div className={$.container}>
         <main>{children}</main>
         <footer className={$.footer}>

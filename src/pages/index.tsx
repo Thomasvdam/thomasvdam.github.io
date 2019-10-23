@@ -10,7 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h2>Under construction</h2>
     <p>Eventually this will contain navigation and the most recent items. For now it's just a lonely link at the bottom.</p>
-    <Link to="/about/">About</Link>
+    <Link to="/about">About</Link>
   </Layout>
 );
 

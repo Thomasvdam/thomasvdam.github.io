@@ -1,8 +1,13 @@
 import { graphql } from 'gatsby';
+import React from 'react';
 
 import ListingTemplate from './listing';
 
-export default ListingTemplate;
+const CategoryListingTemplate = ({ data, pageContext, path }) => (
+    <ListingTemplate data={data} pageContext={pageContext} path={path} linkTo={'/category/all'} />
+);
+
+export default CategoryListingTemplate;
 
 export const pageQuery = graphql`
 query categoryPostsQuery($skip: Int!, $limit: Int!, $category: String!) {

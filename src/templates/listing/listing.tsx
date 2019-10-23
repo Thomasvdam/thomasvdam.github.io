@@ -31,16 +31,18 @@ type props = {
         totalPages: number;
         previousPage: string | null;
         nextPage: string | null;
-    }
+    },
+    path: string;
+    linkTo?: string;
 };
 
-const ListingTemplate = ({ data, pageContext }: props) => {
+const ListingTemplate = ({ data, pageContext, path, linkTo }: props) => {
     const { category: categoryRaw, currentPage, totalPages, previousPage, nextPage } = pageContext;
     const category = categoryRaw.charAt(0).toUpperCase() + categoryRaw.slice(1);
     const { allMarkdownRemark: { edges } } = data;
 
     return (
-        <Layout>
+        <Layout back={linkTo}>
             <SEO title={category}/>
             <h2>{category} posts</h2>
             <div className={$.postsContainer}>
@@ -51,6 +53,7 @@ const ListingTemplate = ({ data, pageContext }: props) => {
                         className={$.listingPreview}
                         key={slug}
                         date={date}
+                        from={path}
                         tags={tags}
                         title={title}
                         slug={slug}
