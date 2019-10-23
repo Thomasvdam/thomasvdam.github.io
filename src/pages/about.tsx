@@ -89,8 +89,9 @@ const IndexPage = () => (
       <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="Music">
         <p>
           I listen to music a lot (and I mean a <b>lot</b>). These days it's mostly techno and some house/techouse.
-          I'm a huge fan of Richie Hawtin and Adam Beyer and his label Drumcode. I also still enjoy rock, punk,
-          progressive metal, and a broad range of other genres from time to time.
+          I'm a huge fan of Richie Hawtin, in particular his CLOSE shows. There's a special place in my heart for Adam
+          Beyer and his label Drumcode as well. I also still enjoy rock, punk, progressive metal, and a broad range of
+          other genres from time to time.
         </p>
       </InfoBlock>
       <InfoBlock className={$.moreInfo} title="Music making / Synthesis">
@@ -102,7 +103,7 @@ const IndexPage = () => (
       <InfoBlock className={$.moreInfo} title="Mental health">
         <p>
           As it's something I struggle with from time to time I'm interested in mental wellbeing and how it influences
-          me and I can influence it.
+          me and how I can influence it in return.
         </p>
       </InfoBlock>
     </div>
