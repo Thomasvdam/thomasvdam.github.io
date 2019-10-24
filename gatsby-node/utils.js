@@ -1,11 +1,11 @@
-const extractTags = (allMarkdownPages) => {
+const extractCategories = (allMarkdownPages) => {
     return allMarkdownPages.data.allMarkdownRemark.edges.reduce((acc, { node }) => {
-        const { fields: { slug }, frontmatter: { tags } } = node;
-        tags.forEach(tag => {
-            if (Array.isArray(acc[tag])) {
-                acc[tag].push(slug);
+        const { fields: { slug }, frontmatter: { categories } } = node;
+        categories.forEach(category => {
+            if (Array.isArray(acc[category])) {
+                acc[category].push(slug);
             } else {
-                acc[tag] = [slug];
+                acc[category] = [slug];
             }
         });
 
@@ -38,7 +38,7 @@ const surroundingPages = (index, totalPages) => {
 
 
 module.exports = {
-    extractTags,
+    extractCategories,
     listingPathFromIndexForCategory,
     surroundingPages,
 };

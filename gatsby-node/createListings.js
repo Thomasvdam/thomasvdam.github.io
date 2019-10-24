@@ -2,7 +2,7 @@ const path = require('path');
 
 const { CATEGORY_ALL, POSTS_PER_LISTING } = require('./constants');
 const {
-    extractTags,
+    extractCategories,
     listingPathFromIndexForCategory,
     surroundingPages,
 } = require('./utils');
@@ -31,19 +31,19 @@ const createAllListing = (createPage, allMarkdownPages) => {
 
 const createCategoryListings = (createPage, allMarkdownPages) => {
     const categoryListingTemplate = path.resolve("./src/templates/listing/categoryListing.tsx");
-    const taggedPages = extractTags(allMarkdownPages);
+    const taggedPages = extractCategories(allMarkdownPages);
 
-    Object.keys(taggedPages).forEach(tag => {
-        const categoryPosts = taggedPages[tag];
+    Object.keys(taggedPages).forEach(category => {
+        const categoryPosts = taggedPages[category];
         const categoryPages = Math.ceil(categoryPosts.length / POSTS_PER_LISTING);
-        const categoryListingPathFromIndex = listingPathFromIndexForCategory(tag);
+        const categoryListingPathFromIndex = listingPathFromIndexForCategory(category);
 
         categoryPosts.forEach((_, i) => {
             createPage({
                 path: categoryListingPathFromIndex(i),
                 component: categoryListingTemplate,
                 context: {
-                    category: tag,
+                    category,
                     limit: POSTS_PER_LISTING,
                     skip: i * POSTS_PER_LISTING,
                     totalPages: categoryPages,

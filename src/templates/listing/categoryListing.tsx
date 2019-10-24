@@ -15,7 +15,7 @@ query categoryPostsQuery($skip: Int!, $limit: Int!, $category: String!) {
     sort: { fields: [frontmatter___date], order: DESC }
     limit: $limit
     skip: $skip
-    filter: { frontmatter: { tags: { in: [$category] } } }
+    filter: { frontmatter: { categories: { in: [$category] } } }
   ) {
     edges {
       node {
@@ -25,7 +25,7 @@ query categoryPostsQuery($skip: Int!, $limit: Int!, $category: String!) {
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          tags
+          categories
           subject
         }
       }

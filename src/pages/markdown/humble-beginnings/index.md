@@ -2,7 +2,7 @@
 date: "2019-10-18"
 title: "Humble beginnings"
 subject: "Why did I start this and what is the point?"
-tags:
+categories:
     - personal
 ---
 As far as first posts go this one is pretty unremarkable, but we all have to start somewhere.

@@ -5,7 +5,7 @@ import $ from './regularPost.module.scss';
 import Layout from '~/components/layout/layout';
 import SEO from '~/components/seo';
 import DateLabel from '~/components/date/dateLabel';
-import TagLabel from '~/components/tagLabel/tagLabel';
+import CategoryLabel from '~/components/categoryLabel/categoryLabel';
 import FirstWordHighlight from '~/components/firstWordHighlight/firstWordHighlight';
 
 const RegularPostTemplate = ({ data, pageContext, location }) => {
@@ -16,7 +16,7 @@ const RegularPostTemplate = ({ data, pageContext, location }) => {
     }
 
     const { markdownRemark } = data;
-    const { frontmatter: { title, date, tags }, html } = markdownRemark;
+    const { frontmatter: { title, date, categories }, html } = markdownRemark;
 
     return (
         <Layout back={from}>
@@ -26,8 +26,8 @@ const RegularPostTemplate = ({ data, pageContext, location }) => {
                 <DateLabel date={date}/>
             </div>
 
-            <div className={$.tagContainer}>
-                {tags.map(tag => (<TagLabel key={tag} tag={tag}/>))}
+            <div className={$.categoryContainer}>
+                {categories.map(category => (<CategoryLabel key={category} category={category}/>))}
             </div>
 
             <div dangerouslySetInnerHTML={{ __html: html }}/>
@@ -42,7 +42,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title
-        tags
+        categories
       }
     }
   }

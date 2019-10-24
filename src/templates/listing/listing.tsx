@@ -17,7 +17,7 @@ type props = {
                     }
                     frontmatter: {
                         date: string;
-                        tags: string[],
+                        categories: string[],
                         title: string,
                         subject: string,
                     },
@@ -47,14 +47,14 @@ const ListingTemplate = ({ data, pageContext, path, linkTo }: props) => {
             <h2>{category} posts</h2>
             <div className={$.postsContainer}>
                 {edges.map((edge) => {
-                    const { node: { fields: { slug }, frontmatter: { date, tags, title, subject } } } = edge;
+                    const { node: { fields: { slug }, frontmatter: { date, categories, title, subject } } } = edge;
 
                     return <PostPreview
                         className={$.listingPreview}
                         key={slug}
                         date={date}
                         from={path}
-                        tags={tags}
+                        categories={categories}
                         title={title}
                         slug={slug}
                         subject={subject}

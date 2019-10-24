@@ -19,7 +19,7 @@ query allPostsQuery($skip: Int!, $limit: Int!) {
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
-          tags
+          categories
           subject
         }
       }
