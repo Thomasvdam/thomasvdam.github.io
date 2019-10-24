@@ -5,26 +5,10 @@ import $ from './listing.module.scss';
 import Layout from '~/components/layout/layout';
 import SEO from '~/components/seo';
 import Button from '~/components/button/button';
-import PostPreview from '~/components/postPreview/postPreview';
+import PostListing from '~/components/postListing/postListing';
 
 type props = {
-    data: {
-        allMarkdownRemark: {
-            edges: {
-                node: {
-                    fields: {
-                        slug: string;
-                    }
-                    frontmatter: {
-                        date: string;
-                        categories: string[],
-                        title: string,
-                        subject: string,
-                    },
-                },
-            }[];
-        }
-    };
+    data: markdownData;
     pageContext: {
         category: string;
         currentPage: number;
@@ -45,22 +29,7 @@ const ListingTemplate = ({ data, pageContext, path, linkTo }: props) => {
         <Layout back={linkTo}>
             <SEO title={category}/>
             <h2>{category} posts</h2>
-            <div className={$.postsContainer}>
-                {edges.map((edge) => {
-                    const { node: { fields: { slug }, frontmatter: { date, categories, title, subject } } } = edge;
-
-                    return <PostPreview
-                        className={$.listingPreview}
-                        key={slug}
-                        date={date}
-                        from={path}
-                        categories={categories}
-                        title={title}
-                        slug={slug}
-                        subject={subject}
-                    />;
-                })}
-            </div>
+            <PostListing edges={edges} from={path}></PostListing>
             <div className={$.footer}>
                 {previousPage ?
                     <Link className={$.link} to={previousPage}><Button>←</Button></Link>
