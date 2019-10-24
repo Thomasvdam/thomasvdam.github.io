@@ -1,0 +1,11 @@
+@import '../styles/variables';
+
+:local {
+    .link {
+        color: get-colour('text', 'content');
+
+        &-container {
+            text-align: center;
+        }
+    }
+}

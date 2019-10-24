@@ -8,7 +8,7 @@ import SEO from '~/components/seo';
 import InfoBlock from '~/components/infoBlock/infoBlock';
 import FirstWordHighlight from '~/components/firstWordHighlight/firstWordHighlight';
 
-const IndexPage = () => (
+const AboutPage = () => (
   <Layout>
     <SEO title="About me" />
     <h2><FirstWordHighlight>About me</FirstWordHighlight></h2>
@@ -111,4 +111,4 @@ const IndexPage = () => (
   </Layout>
 );
 
-export default IndexPage;
+export default AboutPage;
