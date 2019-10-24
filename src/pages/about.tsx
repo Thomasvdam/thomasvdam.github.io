@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import $ from './about.module.scss';
 
 import Layout from '~/components/layout/layout';
@@ -47,7 +48,7 @@ const IndexPage = () => (
           <li>Frontend web developer at <a target="_blank" rel="noopener" href="https://www.wearetriple.com/">Triple</a></li>
         </ul>
       </InfoBlock>
-      <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="What I do now">
+      <InfoBlock className={classNames([$.moreInfo, $.moreInfo_wide])} title="What I do now">
         <p>
           I'm currently a frontend web developer at <a target="_blank" rel="noopener" href="https://www.wearetriple.com/">Triple</a>,
           with a focus on the more technical side rather than the visual side (as you have probably already gathered).
@@ -66,7 +67,7 @@ const IndexPage = () => (
     <h2>My interests</h2>
 
     <div className={$.infoContainer}>
-      <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="Development">
+      <InfoBlock className={classNames([$.moreInfo, $.moreInfo_wide])} title="Development">
         <p>
           While I'm working as a frontend web developer my interest in development is much broader. I'm interested in
           all programming languages; in particular strongly typed and compiled languages.
@@ -86,7 +87,7 @@ const IndexPage = () => (
           I'm always up for a game, whether it's the virtual or physical kind.
         </p>
       </InfoBlock>
-      <InfoBlock className={`${$.moreInfo} ${$.moreInfo_wide}`} title="Music">
+      <InfoBlock className={classNames([$.moreInfo, $.moreInfo_wide])} title="Music">
         <p>
           I listen to music a lot (and I mean a <b>lot</b>). These days it's mostly techno and some house/techouse.
           I'm a huge fan of Richie Hawtin, in particular his CLOSE shows. There's a special place in my heart for Adam

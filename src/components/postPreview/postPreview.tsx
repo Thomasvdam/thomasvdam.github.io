@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import classNames from 'classnames';
 import $ from './postPreview.module.scss';
 
 import DateLabel from '~/components/date/dateLabel';
@@ -16,21 +17,25 @@ type props = {
     title: string,
 };
 
-const PostPreview = ({ className = '', date, slug, subject, categories = [], title, from }: props) => (
-    <div className={`${$.container} ${className}`}>
-        <div>
-            <Link className={$.previewLink} to={`/${slug}`} state={{ from, }}>
-                <h3 className={$.title}><FirstWordHighlight>{title}</FirstWordHighlight></h3>
-            </Link>
-            <DateLabel date={date}/>
-            <p className={$.subject}>
-                {subject}
-            </p>
+const PostPreview = ({ className = '', date, slug, subject, categories = [], title, from }: props) => {
+    const previewContainerClassnames = classNames([className, $.container]);
+
+    return (
+        <div className={previewContainerClassnames}>
+            <div>
+                <Link className={$.previewLink} to={`/${slug}`} state={{ from, }}>
+                    <h3 className={$.title}><FirstWordHighlight>{title}</FirstWordHighlight></h3>
+                </Link>
+                <DateLabel date={date}/>
+                <p className={$.subject}>
+                    {subject}
+                </p>
+            </div>
+            <div>
+                {categories.map(category => (<CategoryLabel key={category} category={category}/>))}
+            </div>
         </div>
-        <div>
-            {categories.map(category => (<CategoryLabel key={category} category={category}/>))}
-        </div>
-    </div>
-);
+    );
+};
 
 export default PostPreview;
