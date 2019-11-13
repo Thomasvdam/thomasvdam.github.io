@@ -23,7 +23,7 @@ const createAllListing = (createPage, allMarkdownPages) => {
                 skip: i * POSTS_PER_LISTING,
                 totalPages,
                 currentPage: i + 1,
-                ...surroundingPages(i, totalPages),
+                ...surroundingPages(i, totalPages, allListingPathFromIndex),
             },
         });
     });
@@ -48,7 +48,7 @@ const createCategoryListings = (createPage, allMarkdownPages) => {
                     skip: i * POSTS_PER_LISTING,
                     totalPages: categoryPages,
                     currentPage: i + 1,
-                    ...surroundingPages(i, categoryPages),
+                    ...surroundingPages(i, categoryPages, categoryListingPathFromIndex),
                 }
             })
         });

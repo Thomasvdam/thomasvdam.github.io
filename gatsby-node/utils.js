@@ -18,7 +18,7 @@ const listingPathFromIndexForCategory = (category) => {
     return listingPathFromIndex;
 }
 
-const surroundingPages = (index, totalPages) => {
+const surroundingPages = (index, totalPages, listingPathFromIndex) => {
     const pages = {};
 
     if (index === 0) {
