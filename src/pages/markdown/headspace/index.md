@@ -78,7 +78,7 @@ While yesterday I had trouble focussing on the exercise, I felt like today I had
 Keywords:
 Controlled breathing, strong focus
 
-### Session 9, *2019-11-21
+### Session 9, *2019-11-21*
 Today I had another therapy session. We discussed my observations from the previous weeks, which helped figure out a bit better what it is exactly that I'm supposed to get 'better' at. Turns out that the controlled breathing is not that much of an issue, the bigger picture is training the ability to realise when my mind gets 'stuck' in a thought. It's quite motivating now that I know that this is part of the goal and that I'm at a point where I can catch myself on occasion. :)
 
 I realised that I wasn't very well prepared for the session though, so I'll try and get some better preparation together before the next time.
@@ -87,3 +87,13 @@ I did my meditation afterwards as I didn't get to it in the morning. I noticed t
 
 Keywords:
 Controlled breathing, calm
+
+### Session 10, *2019-11-23*
+Missed yesterday's session as I thought I'd be able to slot it in somewhere but that turned out not to be as easy as I thought. I'll have to put a little more thought into it for the future. I want to experiment with meditating on the train, but I fear that it will be too easy to get distracted. I guess I'll just have to get up a little earlier so I can slot it into my morning routine.
+
+During my session today I noticed that I had a plethora of thoughts running around and that my attention was flicking between them and the exercise I was supposed to focus on. It felt a little overwhelming as the pace was so fast that I didn't even register some thoughts. The exercises talk about stepping back and observing this happening, but I felt like I was right in the thick of it running from thought to thought. I suppose realizing this is a first step into the stepping back, so that's good.
+
+A couple of times I felt like I was observing my breath instead of controlling, so this also seems a promising progression. Small steps, but it's something.
+
+Keywords:
+Thoughts, thoughts, thoughts
